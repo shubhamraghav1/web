@@ -1,0 +1,325 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 715,
+      "max": [
+        645.6978759765625,
+        593.6348876953125,
+        78.740158081054688
+      ],
+      "min": [
+        144.60850524902344,
+        150.45590209960938,
+        -3.0202788796122556e-16
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 8580,
+      "componentType": 5126,
+      "count": 715,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1524,
+      "max": [
+        714
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 17160,
+      "componentType": 5126,
+      "count": 144,
+      "max": [
+        634.15960693359375,
+        593.6348876953125,
+        39.370079040527344
+      ],
+      "min": [
+        215.27780151367188,
+        289.19610595703125,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 18888,
+      "componentType": 5126,
+      "count": 144,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 6096,
+      "componentType": 5125,
+      "count": 240,
+      "max": [
+        143
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "sraghav00 (https://sketchfab.com/sraghav00)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/3bhk-floor-plan-154f479fb6e24f71adfec8111ae0299d",
+      "title": "3BHK FLOOR PLAN"
+    },
+    "generator": "Sketchfab-5.13.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 7056,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20616,
+      "byteOffset": 7056,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 27672,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": false,
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": false,
+      "name": "Translucent_Glass_Blue",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.39215699999999998,
+          0.584314,
+          0.92941200000000002,
+          0.50196099999999999
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Material2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Material2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Collada visual scene group"
+    },
+    {
+      "children": [
+        10,
+        11,
+        4,
+        6,
+        8
+      ],
+      "name": "SketchUp"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        0.8915535,
+        -0.45291550000000003,
+        0,
+        0,
+        0.32604149999999998,
+        0.64180519999999996,
+        0.69410590000000005,
+        0,
+        -0.31437130000000002,
+        -0.61883250000000001,
+        0.71987290000000004,
+        0,
+        -72.88261,
+        -706.56010000000003,
+        1245.4849999999999,
+        1
+      ],
+      "name": "skp_camera_Last_Saved_SketchUp_View"
+    },
+    {
+      "name": "ID1"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        0.8915535,
+        -0.45291550000000003,
+        -2.7755580000000001e-17,
+        0,
+        0.32604149999999998,
+        0.64180519999999996,
+        0.69410590000000005,
+        0,
+        -0.31437130000000002,
+        -0.61883250000000001,
+        0.71987290000000004,
+        0,
+        233.3169,
+        -127.1947,
+        552.72360000000003,
+        1
+      ],
+      "name": "skp_camera_Scene_1"
+    },
+    {
+      "name": "ID2"
+    },
+    {
+      "children": [
+        9
+      ],
+      "matrix": [
+        0.98302920000000005,
+        0.18344930000000001,
+        0,
+        0,
+        -0.15889239999999999,
+        0.85143880000000005,
+        0.49980520000000001,
+        0,
+        0.091688939999999997,
+        -0.49132310000000001,
+        0.86613779999999996,
+        0,
+        426.1703,
+        -194.30799999999999,
+        772.29999999999995,
+        1
+      ],
+      "name": "skp_camera_Scene_2"
+    },
+    {
+      "name": "ID3"
+    },
+    {
+      "mesh": 0,
+      "name": "Material2"
+    },
+    {
+      "mesh": 1,
+      "name": "Material2"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
