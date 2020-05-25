@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<script src="https://stemkoski.github.io/AR.js-examples/js/aframe-text-geometry-component.min.js"></script>
+
+
+   <body style="margin : 0px; overflow: hidden;">
+  <!-- minimal loader shown until image descriptors are loaded -->
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+
+  <a-assets>
+		<a-asset-item id="exoFont" src="https://stemkoski.github.io/AR.js-examples/fonts/exoBlack.typeface.json"></a-asset-item>
+		<img id="pixels" src="https://stemkoski.github.io/AR.js-examples/images/pixels.png" />
+	</a-assets>
+	
+        <!--<a-marker preset="hiro">-->
+        	<a-marker id="marker2" type='pattern' url='https://raw.githubusercontent.com/shubhamraghav1/web/master/hmd/pattern-b.patt'>
+            <!--<a-entity
+            position="0 0 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            ></a-entity>-->
+<a-entity>
+
+            <a-image src="https://raw.githubusercontent.com/shubhamraghav1/web/master/hmd/hmdtanya-b.png" crossorigin="anonymous" scale='2 2 2' position='0 0 0' rotation='0 0 0'>
+                
+            </a-image>
+
+            </a-entity>
+            <a-entity text-geometry="value: Hello, world!; font: #exoFont;"
+			material="color: yellow; src: #pixels; repeat: 0.5 0.5;" 
+			rotation="-90 0 0">
+		</a-entity>
+
+
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
