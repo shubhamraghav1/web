@@ -1,0 +1,369 @@
+<!doctype HTML>
+<html>
+    <head>
+    
+
+
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+<!--<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>-->
+
+<script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+
+<!--checking animation alon path scripts-->
+
+<script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+
+  <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+
+
+<!--<script>
+  if(window.navigator.userAgent.indexOf("OPR") > -1 || window.navigator.userAgent.indexOf("Opera") > -1){
+            window.location = "googlechrome://navigate?url=https://wnlc0bcgl9ycopmmryqgha-on.drv.tw/webar marker test.html";
+      }
+      </script>-->
+
+
+     </head>
+    <body style='margin : 0px; overflow: hidden;'>
+
+         <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+
+
+<div id="message" style="display:none; z-index: 1"><img src="https://raw.githubusercontent.com/shubhamraghav1/web/master/tap%20allow%20to%20continue.png"></div>
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+       <script>
+        //When the page has loaded.
+        $( document ).ready(function(){
+            $('#message').fadeIn('slow', function(){
+               $('#message').delay(5000).fadeOut(); 
+            });
+        });
+        </script>
+
+
+
+		<button id ="button" onclick="nextScene()">
+     HIDE OBJECTS
+    </button>
+	</div>
+
+
+
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3 renderer='antialias: true renderer='logarithmicDepthBuffer: true;' shadow="type: pcfsoft">
+
+
+
+
+
+        <a-assets>
+
+<!-- sound -->
+<a-assets>
+
+
+<audio id="sound2" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/PITCH-EQ-3bhk.mp3" preload="auto"></audio>
+
+<audio id="sound3" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/media.io_PITCH_EQ_2bhk.mp3" preload="auto"></audio>
+  </a-assets>
+
+            
+            
+ <a-asset-item id="animated-assetv" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/3BHK%20FLOOR%20PLAN%20(2).gltf" crossOrigin="anonymous"></a-asset-item>
+
+<a-asset-item id="animated-assetd" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/bathroom%20fitting.gltf" crossOrigin="anonymous"></a-asset-item>
+
+<a-asset-item id="animated-assete" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/table.gltf" crossOrigin="anonymous"></a-asset-item>
+
+<a-asset-item id="animated-assetf" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/sofa.gltf" crossOrigin="anonymous"></a-asset-item>
+
+
+
+
+
+
+<!--2bhk-->
+
+
+<!--<a-asset-item id="animated-assetw" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20layout.gltf" crossOrigin="anonymous"></a-asset-item>
+
+<a-asset-item id="animated-assetx" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20bath.gltf" crossOrigin="anonymous"></a-asset-item>
+
+<a-asset-item id="animated-assety" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20table.gltf" crossOrigin="anonymous"></a-asset-item>
+
+<a-asset-item id="animated-assetz" src="https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20sofa.gltf" crossOrigin="anonymous"></a-asset-item>-->
+
+
+</a-assets>
+      
+ 
+            <a-marker preset='hiro'>
+
+ 
+<a-entity sound="src: #sound2"></a-entity>
+<a-entity sound="src: #sound3"></a-entity>
+
+
+
+
+<a-entity id="scene1" 
+                gltf-model="#animated-assetv" scale="0.1 0.1 0.1" position=" -1 0 1">
+
+
+
+
+<a-entity id="scene1"
+                gltf-model="#animated-assetd" scale="1 1 1" position=" 0 0 0">
+                </a-entity>
+
+<a-entity id="scene1"
+                gltf-model="#animated-assete"  scale="1 1 1" position=" 0 0 0">
+                </a-entity>
+
+<a-entity id="scene1"
+                gltf-model="#animated-assetf" scale=scale="1 1 1" position=" 0 0 0">
+                </a-entity>
+
+               <a-gltf-model id="bed" src="#bed" scale="1 1 1" position=" 0 0 0" ></a-gltf-model>
+
+
+
+
+
+<a-entity id="ani">
+
+
+<a-gltf-model src="https://raw.githubusercontent.com/shubhamraghav1/web/master/walking%20girl.gltf" position="5 0 -3" rotation="0 90 0" 
+animation="property: position; dur: 8000; to: 8 0 -3; easing: linear;" 
+animation__2="property: rotation; delay:8000; dur: 2000; from: 0 90 0; to: 0 180 0; easing: linear;" 
+ animation__3="property: position; delay:10000; dur: 8000; from:  8 0 -3; to: 8 0 -9; easing: linear;" 
+ animation__4="property: rotation; delay:18000; dur: 2000; from: 0 180 0; to: 0 270 0; easing: linear;"
+animation__5="property: position; delay:20000; dur: 8000; from:  8 0 -9; to: 6 0 -9; easing: linear;"
+animation__6="property: rotation; delay:28000; dur: 2000; from: 0 270 0; to: 0 90 0; easing: linear;"  
+animation__7="property: position; delay:30000; dur: 8000; from:  6 0 -9; to: 8 0 -9; easing: linear;" 
+animation__8="property: rotation; delay:38000; dur: 2000; from: 0 90 0; to: 0 180 0; easing: linear;"  
+animation__9="property: position; delay:40000; dur: 8000; from:  8 0 -9; to: 8 0 -12; easing: linear;" 
+animation__10="property: rotation; delay:48000; dur: 2000; from: 0 180 0; to: 0 0 0; easing: linear;"  
+animation__11="property: position; delay:50000; dur: 8000; from:  8 0 -12; to: 8 0 -10; easing: linear;" 
+animation__12="property: rotation; delay:58000; dur: 2000; from: 0 0 0; to: 0 90 0; easing: linear;"  
+animation__13="property: position; delay:60000; dur: 8000; from:  8 0 -10; to: 13 0 -10; easing: linear;"
+animation__14="property: rotation; delay:68000; dur: 2000; from: 0 90 0; to: 0 270 0; easing: linear;"  
+animation__15="property: position; delay:70000; dur: 8000; from:  13 0 -10; to: 10 0 -10; easing: linear;"
+animation__16="property: rotation; delay:78000; dur: 2000; from: 0 270 0; to: 0 180 0; easing: linear;"  
+animation__17="property: position; delay:80000; dur: 8000; from:  10 0 -10; to: 10 0 -14; easing: linear;"
+animation__18="property: rotation; delay:88000; dur: 2000; from: 0 180 0; to: 0 0 0; easing: linear;"  
+animation__19="property: position; delay:90000; dur: 8000; from:  10 0 -14; to: 10 0 -6.5; easing: linear;"
+animation__20="property: rotation; delay:98000; dur: 2000; from: 0 0 0; to: 0 90 0; easing: linear;"  
+animation__21="property: position; delay:100000; dur: 8000; from:  10 0 -6.5; to: 13 0 -6.5; easing: linear;" 
+animation-mixer>
+</a-gltf-model>
+</a-entity>
+ </a-entity>
+
+
+
+
+<!--2bhk-->
+<a-entity id="scene2" position="-1.2 0 1 " scale=" 2 2 2">
+
+
+ <a-gltf-model id="layout2" src="#layout2" scale="0.1 0.1 0.1" position=" 0 0 0"></a-gltf-model>
+<a-gltf-model id="bath2" src="#bath2" scale="0.1 0.1 0.1" position="  0 0 0"></a-gltf-model>
+<a-gltf-model id="table2" src="#table2" scale="0.1 0.1 0.1" position="  0 0 0"></a-gltf-model>
+<a-gltf-model id="sofa2" src="#sofa2" scale="0.1 0.1 0.1" position=" 0 0 0"></a-gltf-model>
+ <a-gltf-model id="bed2" src="#bed2" scale="0.1 0.1 0.1" position="  0 0 0"></a-gltf-model>
+
+<!--<a-entity id="ani2" >
+<a-entity id="box" geometry="primitive: box" material="color: #ffffff00" position="0.5 0 0" rotation="0 90 0" scale="0.0008 0.0008 0.0008"
+    animation="property: position; startEvents: cl; dur: 8000; to: 0.6 0 0; easing: linear; autoplay: false"
+ animation__2="property: rotation; startEvents: cl; delay:8000; dur: 1000; from: 0 90 0; to: 0 180 0; easing: linear; autoplay: false" 
+ animation__3="property: position; startEvents: cl; delay:9000; dur: 8000; from:  0.6 0 0; to: 0.6 0 -0.35; easing: linear; autoplay: false" 
+ animation__4="property: rotation; startEvents: cl; delay:17000; dur: 1000; from: 0 180 0; to: 0 90 0; easing: linear; autoplay: false"
+animation__5="property: position; startEvents: cl; delay:18000; dur: 8000; from:  0.6 0 -0.35; to: 1 0 -0.35; easing: linear; autoplay: false"
+animation__6="property: rotation; startEvents: cl; delay:26000; dur: 1000; from: 0 90 0; to: 0 270 0; easing: linear; autoplay: false" 
+animation__7="property: position; startEvents: cl; delay:27000; dur: 8000; from:  1 0 -0.35; to: 0.6 0 -0.35; easing: linear; autoplay: false"
+animation__8="property: rotation; startEvents: cl; delay:35000; dur: 1000; from: 0 270 0; to: 0 180 0; easing: linear; autoplay: false" 
+animation__9="property: position; startEvents: cl; delay:36000; dur: 8000; from:  0.6 0 -0.35; to: 0.6 0 -0.55; easing: linear; autoplay: false" 
+animation__10="property: rotation; startEvents: cl; delay:44000; dur: 1000; from: 0 180 0; to: 0 90 0; easing: linear; autoplay: false"  
+animation__11="property: position; startEvents: cl; delay:45000; dur: 8000; from:  0.6 0 -0.55; to: 0.8 0 -0.55; easing: linear; autoplay: false" 
+animation__12="property: rotation; startEvents: cl; delay:53000; dur: 1000; from: 0 90 0; to: 0 270 0; easing: linear; autoplay: false"
+animation__13="property: position; startEvents: cl; delay:54000; dur: 8000; from:  0.8 0 -0.55; to: 0.6 0 -0.55; easing: linear; autoplay: false"
+animation__14="property: rotation; startEvents: cl; delay:62000; dur: 1000; from: 0 270 0; to: 0 180 0; easing: linear; autoplay: false" 
+ animation__15="property: position; startEvents: cl; delay:63000; dur: 8000; from:  0.6 0 -0.55; to: 0.6 0 -1; easing: linear; autoplay: false">
+
+<a-gltf-model src="https://raw.githubusercontent.com/shubhamraghav1/web/master/walking%20girl.gltf"  
+                    position="0 0 0" rotation="0 0 0" scale="100 100 100" animation-mixer>
+</a-gltf-model>
+    </a-entity>
+</a-entity>-->
+
+<!-- checking animation alon path-->
+<a-curve id="track1">
+      <a-curve-point position="0.5 0 0"></a-curve-point>
+      <a-curve-point position="0.6 0 0"></a-curve-point>
+      <a-curve-point position="0.6 0 -0.35"></a-curve-point>
+      <a-curve-point position="1 0 -0.35"></a-curve-point>
+      <a-curve-point position="0.6 0 -0.35"></a-curve-point>
+      <a-curve-point position="0.6 0 -0.55"></a-curve-point>
+      <a-curve-point position="0.8 0 -0.55"></a-curve-point>
+      <a-curve-point position="0.6 0 -0.55"></a-curve-point>
+      <a-curve-point position="0.6 0 -1"></a-curve-point>
+    </a-curve>
+
+
+<a-entity id="ani2" >
+<a-entity id="box" geometry="primitive: box" material="color: #ffffff00" position="0.5 0 0" rotation="0 90 0" scale="0.0008 0.0008 0.0008" alongpath="curve: #track1; dur:20000">
+<a-gltf-model src="https://raw.githubusercontent.com/shubhamraghav1/web/master/walking%20girl.gltf"  
+                    position="0 0 0" rotation="0 0 0" scale="100 100 100" animation-mixer>
+</a-gltf-model>
+    </a-entity>
+</a-entity>
+
+
+
+
+</a-entity>
+
+            </a-marker>
+        
+        <a-entity camera camera="far:100000; near:0.01"></a-entity>
+        </a-scene>
+
+
+<script>
+
+document.querySelector('a-scene').addEventListener('loaded', function () { document.getElementById('ani').pause();
+console.log("loaded");})
+
+
+
+</script>
+
+<!--
+    j.addEventListener('click', () => { 
+
+console.log("it clicks");  
+})
+
+
+
+var m = document.querySelector("a-marker")
+m.addEventListener("markerFound", (e)=>{
+
+
+
+ document.getElementById('ani').play();
+document.getElementById('sound2').play();
+   console.log("found")
+})
+
+m.addEventListener("markerLost", (e)=>{
+
+
+
+document.getElementById('ani').pause();
+document.getElementById('sound2').pause();
+   console.log("lost")
+})
+-->
+
+<script>
+
+
+var bed = document.getElementById('bed');
+
+setTimeout(() => {
+bed.setAttribute('gltf-model', 'https://raw.githubusercontent.com/shubhamraghav1/web/master/bed.gltf');
+
+ }, 9000);
+
+</script>
+
+<!--2bhk-->
+
+<script>
+
+var layout2 = document.getElementById('layout2');
+
+setTimeout(() => {
+layout2.setAttribute('gltf-model', 'https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20layout.gltf');
+
+ }, 9000);
+</script>
+<script>
+var bath2 = document.getElementById('bath2');
+
+setTimeout(() => {
+bath2.setAttribute('gltf-model', 'https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20bath.gltf');
+
+ }, 9000);
+</script>
+<script>
+var table2 = document.getElementById('table2');
+
+setTimeout(() => {
+table2.setAttribute('gltf-model', 'https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20table.gltf');
+
+ }, 9000);
+</script>
+
+<script>
+var sofa2 = document.getElementById('sofa2');
+
+setTimeout(() => {
+sofa2.setAttribute('gltf-model', 'https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20sofa.gltf');
+
+ }, 9000);
+</script>
+
+<script>
+var bed2 = document.getElementById('bed2');
+
+setTimeout(() => {
+bed2.setAttribute('gltf-model', 'https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20bed.gltf');
+
+ }, 9000);
+
+</script>
+
+<script type="text/javascript">
+document.getElementById('scene2').setAttribute('visible', 'false')
+  function nextScene() {
+document.querySelector("#box").emit("cl");
+
+document.getElementById('sound2').pause();
+var m = document.querySelector("a-marker")
+m.addEventListener("markerFound", (e)=>{
+
+
+document.getElementById('sound2').pause();
+
+document.getElementById('ani2').play();
+
+document.getElementById('sound3').play();
+   console.log("found")
+})
+
+m.addEventListener("markerLost", (e)=>{
+
+
+document.getElementById('ani2').pause();
+document.getElementById('sound3').pause();
+   console.log("lost")
+})
+
+    document.getElementById('scene1').setAttribute('visible', 'false')
+    document.getElementById('scene2').setAttribute('visible', 'true')
+
+  }
+  </script>
+
+
+
+
+
+    </body>
+</html>
