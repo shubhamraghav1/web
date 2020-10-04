@@ -1,0 +1,115 @@
+
+
+    <head>
+    
+
+
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+<!--<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>-->
+
+<script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+
+<!--checking animation alon path scripts-->
+
+<script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+
+  <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+
+<!--<script>
+  if(window.navigator.userAgent.indexOf("OPR") > -1 || window.navigator.userAgent.indexOf("Opera") > -1){
+            window.location = "googlechrome://navigate?url=https://wnlc0bcgl9ycopmmryqgha-on.drv.tw/webar marker test.html";
+      }
+      </script>-->
+
+
+     </head>
+
+     <style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+    <body style='margin : 0px; overflow: hidden;'>
+      <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+
+         <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+
+
+<div id="message" style="display:none; z-index: 1"><img src="https://raw.githubusercontent.com/shubhamraghav1/web/master/tap%20allow%20to%20continue.png"></div>
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+       <script>
+        //When the page has loaded.
+        $( document ).ready(function(){
+            $('#message').fadeIn('slow', function(){
+               $('#message').delay(5000).fadeOut(); 
+            });
+        });
+        </script>
+
+
+
+		<button id ="button" onclick="nextScene()">
+     HIDE OBJECTS
+    </button>
+	</div>
+
+
+
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3 renderer='antialias: true renderer='logarithmicDepthBuffer: true;' shadow="type: pcfsoft">
+
+
+            <a-nft
+            type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/shubhamraghav1/web/aimg/aimg/aimg'
+            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+
+ <a-entity
+                gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk%20layout.gltf'
+                scale="0.1 0.1 0.1"
+                position="0 0 0"
+                >
+</a-entity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           </a-nft>
+        
+        <a-entity camera camera="far:100000; near:0.01"></a-entity>
+        </a-scene>
+
+
+    </body>
