@@ -1,10 +1,20 @@
-<!-- First, include whichever version of A-Frame you like. -->
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@e47f441/dist/aframe-master.min.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! • aframe-ar</title>
+    <meta name="description" content="Hello, World! • aframe-ar">
+    <!-- First, include whichever version of A-Frame you like. -->
+		<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@e47f441/dist/aframe-master.min.js"></script>
     <!-- Last, include aframe-ar. -->
     <script src="https://ghcdn.rawgit.org/chenzlabs/aframe-ar/8a7ee3b/dist/aframe-ar.min.js"></script>
-
-<!-- Place the ar component on your scene, and the camera will use AR by default. -->
-<!-- Note that world sensing is required to use AR raycaster with WebXR Viewer on iOS. -->
-<a-scene ar>
-  <a-box color="red" scale="1 1 1"></a-box>
-<a-scene>  
+  </head>
+  <body>
+    <a-scene ar>
+      <a-box width="0.25" height="0.25" depth="0.25" position="-0.25 0.125 -0.75" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+      <a-sphere position="0 0.3125 -1.25" radius="0.3125" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder position="0.25 0.1875 -0.75" radius="0.125" height="0.375" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -1" rotation="-90 0 0" width="1" height="1" color="#7BC8A4" shadow></a-plane>
+    </a-scene>
+  </body>
+</html>
