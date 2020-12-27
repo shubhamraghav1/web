@@ -6,21 +6,47 @@
     <script src="../build.js"></script>
     
     
-  
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    
     
   </head>
   <body>
      
     
-  <a-scene>
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;
+  detectionMode: mono_and_matrix; matrixCodeType: 3x3 renderer='antialias: true
+  renderer='logarithmicDepthBuffer: true;' shadow="type: pcfsoft">
       <a-assets></a-assets>
      
-      
-     <a-entity position="0 0 -5">
+    
+    
+    <a-nft
+    type="nft"
+    url="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/shubhamraghav1/web/aimg/aimg/aimg"
+    smooth="true"
+    smoothCount="10"
+    smoothTolerance="0.01"
+    smoothThreshold="5"
+    position="0 0 0"
+  >
+    <a-entity
+      gltf-model="https://raw.githubusercontent.com/shubhamraghav1/web/master/2bhk_sml_centre.gltf"
+      scale="1200 1200 1200"
+      position="0 0 0" rotation="0 0 0"
+    >
+       <a-entity position="0 0 -5">
  
      <a-entity geometry="primitive:circle;segments:4;" position="-1.2 2.375 -1" scale="2 2 2"  material="shader:gif;src:url(Project 1.gif);transparent:true;" gif=""></a-entity>
        
     </a-entity>
+      
+       </a-entity>
+     </a-nft>
+
+  <a-entity camera camera="far:1000; near:0.1"></a-entity>
+    
+      
     
  
     </a-scene>
