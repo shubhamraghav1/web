@@ -122,4 +122,38 @@
 </body> 
 <script src="aframe-text-geometry-component.min.js"></script>
 	<script src="aframe-gif-shader.js"></script>
+	
+	 <script type="text/javascript">
+    const sceneEl = document.querySelector("a-scene");
+    sceneEl.addEventListener("loaded", () => {
+      sceneEl.camera = new THREE.PerspectiveCamera();
+    });
+
+    let nftElem = document.querySelector("a-nft");
+
+    nftElem.addEventListener("markerFound", (e) => {
+      document.getElementById("scannerContainer").style.display = "none";
+      document.getElementById("imgContainer").style.display = "none";
+      console.log("found");
+    });
+
+    nftElem.addEventListener("markerLost", (e) => {
+      document.getElementById("scannerContainer").style.display = "";
+      document.getElementById("imgContainer").style.display = "";
+      console.log("lost");
+    });
+
+
+
+document.querySelector('a-scene').addEventListener('loaded', function () {                       
+     document.getElementById('vid2').play();
+ document.getElementById('alpha2').play();                                                                     
+console.log("loaded");
+  })
+
+
+
+
+
+  </script>
 	</html>
